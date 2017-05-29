@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:stretchColumns="0,3"
+    >
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名："/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exituid"
+            android:maxLength="30"
+            android:maxLines="2"
+            android:minWidth="150dp"/>
+        <TextView />
+    </TableRow>
+
+    <TableRow>
+        <TextView />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密 码："/>
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/exitupws"
+            android:maxLines="2"
+            android:maxLength="30"
+            android:minWidth="150dp"/>
+        <TextView />
+    </TableRow>
+
+    <TableRow>
+        <TextView />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/Buttonlogin"
+            android:text="登陆"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Buttonregist"
+            android:text="注册"/>
+        <TextView />
+    </TableRow>
+
+</TableLayout>
