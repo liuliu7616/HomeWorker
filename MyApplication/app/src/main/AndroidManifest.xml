@@ -22,12 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".addActivity"
-            android:label="@string/title_activity_add" />
+        <activity android:name=".addActivity" />
         <activity android:name=".regist_Activity" />
         <activity android:name=".homeActivity" />
-        <activity android:name=".Transactions_Activity"></activity>
+        <activity android:name=".Transactions_Activity" />
     </application>
 
 </manifest>

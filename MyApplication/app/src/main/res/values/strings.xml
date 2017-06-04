@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hello</string>
+    <string name="app_name">TextOne</string>
     <string name="title_activity_home">home index</string>
     <string name="title_activity_add">addActivity</string>
 </resources>

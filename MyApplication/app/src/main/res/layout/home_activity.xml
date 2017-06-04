@@ -10,15 +10,15 @@
         <View
             android:layout_width="10dip"
             android:layout_height="match_parent"
-
             android:layout_gravity="center_horizontal"
             />
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/addfriends"/>
+            android:id="@+id/add"
+            android:src="@drawable/add4"/>
         <View
-        android:layout_width="50dip"
+        android:layout_width="40dip"
         android:layout_height="match_parent"
 
         android:layout_gravity="center_horizontal"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/mail"/>
         <View
-            android:layout_width="50dip"
+            android:layout_width="40dip"
             android:layout_height="match_parent"
 
             android:layout_gravity="center_horizontal"
@@ -36,9 +36,10 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/message"/>
+            android:src="@drawable/addfriends"/>
+
         <View
-            android:layout_width="50dip"
+            android:layout_width="40dip"
             android:layout_height="match_parent"
 
             android:layout_gravity="center_horizontal"
