@@ -62,10 +62,10 @@ public class addActivity extends AppCompatActivity {
                     public void done(String s, BmobException e) {
                         if(e==null){
                             Toast.makeText(addActivity.this, "tianjia成功，返回objectid为：" + s, Toast.LENGTH_SHORT).show();
-                            Intent intent =new Intent(addActivity.this,homeActivity.class);
-                            intent.putExtra("userid",uid);
-                            this.onFinish();
-                            startActivity(intent);
+                        //    Intent intent =new Intent(addActivity.this,homeActivity.class);
+                         //   intent.putExtra("userid",uid);
+                            finish();
+                         //   startActivity(intent);
 
                         }
                         else {

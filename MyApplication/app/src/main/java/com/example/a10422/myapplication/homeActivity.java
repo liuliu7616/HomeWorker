@@ -16,6 +16,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class homeActivity extends AppCompatActivity implements View.OnClickListener {
@@ -27,7 +28,9 @@ public class homeActivity extends AppCompatActivity implements View.OnClickListe
 
     public void onResume(){
         super.onResume();
-        adapter.notifyDataSetChanged();
+        TransList.clear();
+        initTrans();
+
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,7 +39,7 @@ public class homeActivity extends AppCompatActivity implements View.OnClickListe
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         Bundle bundle=getIntent().getExtras();
         uid=bundle.getString("userid");
-        initTrans();
+      //  initTrans();
         adapter = new transactionAdapter(homeActivity.this,R.layout.transactions_item1,TransList);
         setContentView(R.layout.home_activity);
         buttonadd = (ImageButton) findViewById(R.id.add);

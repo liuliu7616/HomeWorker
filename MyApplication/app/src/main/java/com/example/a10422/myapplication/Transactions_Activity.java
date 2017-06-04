@@ -74,10 +74,10 @@ public class Transactions_Activity extends AppCompatActivity {
                     public void done(BmobException e) {
                         if (e==null){
                             Toast.makeText(Transactions_Activity.this,"delete succeed",Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(Transactions_Activity.this,homeActivity.class);
-                            intent.putExtra("userid",uid);
-                            this.onFinish();
-                            startActivity(intent);
+                        //    Intent intent = new Intent(Transactions_Activity.this,homeActivity.class);
+                        //    intent.putExtra("userid",uid);
+                            finish();
+                         //   startActivity(intent);
 
                         }
                         else{
@@ -106,10 +106,10 @@ public class Transactions_Activity extends AppCompatActivity {
                     public void done(BmobException e) {
                         if(e==null){
                             Toast.makeText(Transactions_Activity.this,"update succeed",Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(Transactions_Activity.this,homeActivity.class);
-                            intent.putExtra("userid",uid);
-                            startActivity(intent);
-                            this.onFinish();
+                        //    Intent intent = new Intent(Transactions_Activity.this,homeActivity.class);
+                         //   intent.putExtra("userid",uid);
+                         //   startActivity(intent);
+                            finish();
                         }else {
                             Toast.makeText(Transactions_Activity.this,"update fail",Toast.LENGTH_SHORT).show();
                         }
