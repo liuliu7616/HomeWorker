@@ -44,24 +44,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                  struid=edituid.getText().toString();
                 strupws=editupws.getText().toString();
-                String bql="select * from users where uid='"+struid+"'and upasswords='"+strupws+"'";
 
-                new BmobQuery<users>().doSQLQuery(bql, new SQLQueryListener<users>() {
-
+                BmobQuery<users> query=new BmobQuery<users>();
+                query.addWhereEqualTo("uid",struid);
+                query.findObjects(new FindListener<users>() {
                     @Override
-                    public void done(BmobQueryResult<users> result, BmobException e) {
-                        if(e==null) {
-                         List <users> list= (List<users>) result.getResults();
-                           if (list!=null&&list.size()>0)
+                    public void done(List<users> list, BmobException e) {
+                        if (e==null&&list.get(0).getUpasswords().equals(strupws)) {
                             Toast.makeText(MainActivity.this,"login succeed",Toast.LENGTH_SHORT).show();
                             Intent intent =new Intent(MainActivity.this,homeActivity.class);
                             intent.putExtra("userid",struid);
                             startActivity(intent);
                         }
-                        else Toast.makeText(MainActivity.this,"exception"+e.getMessage(),Toast.LENGTH_SHORT).show();
+                        else {
+                            Toast.makeText(MainActivity.this,"用户名和密码不符",Toast.LENGTH_SHORT).show();                        }
                     }
                 });
-              //  if()
 
             }
         });
